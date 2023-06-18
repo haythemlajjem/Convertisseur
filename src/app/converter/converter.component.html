@@ -1,0 +1,46 @@
+<div class="wrapper">
+  <header>Convertisseur de devises</header>
+  <form action="#">
+    <div class="amount">
+      <p>Entrer le montant</p>
+      <input #amountToBeConverted type="number" id="amount" [value]="amount">
+    </div>
+    <div class="drop-list">
+      <div class="from">
+        <p>De</p>
+        <div class="select-box">
+          <img src="{{fromFlag}}" alt="flag">
+
+        </div>
+      </div>
+      <div class="icon">
+        <img (click)="convertCurrency()"
+             src="https://cdn3.iconfinder.com/data/icons/dollar-commerce/512/money_change_bank_finance_financial_international_currency_exchange_payment-512.png"
+             alt="flag">
+      </div>
+      <div class="to">
+        <p>À</p>
+        <div class="select-box">
+          <img src="{{toFlag}}" alt="flag">
+        </div>
+      </div>
+    </div>
+    <!-- <div class="exchange-rate">Getting exchange rate...</div> -->
+    <button (click)="convertAmount(amountToBeConverted.value)">Convertir</button>
+  </form>
+  
+  <div class="form">
+    <label for="rate">Taux de change:</label>
+    <span>{{rate}}</span>
+    <label class="switch" (click)="timer()">
+      <input [checked]="fixRate" type="checkbox">
+      <span class="slider round"></span>
+    </label>
+
+  </div>
+  <div class="rate" >
+    <input  #newRate type="number" id="rate"/>
+    <button (click)="forceRate(newRate.value)">Forcer le taux d'échange</button>
+  </div>
+  <ul class="list-group" *ngFor="let h of history"><li>{{h}}</li></ul>
+</div>
