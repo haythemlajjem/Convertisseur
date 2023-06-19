@@ -1,5 +1,5 @@
-Si j'avais eu plus de temps:
+ Si j'avais eu plus de temps:
 
-* J'aurais créé des tests unitaires.
+* J'aurais créé des tests unitaires (utiliser mocha pour tester les fonctions de conversion).
 
-* J'aurais amelioré l'UX.
+* J'aurais amelioré l'UX (améliorer l'affichage de l'historique et utlisier angular material).
